@@ -1,0 +1,4 @@
+import {defineField,defineType} from "sanity";
+const servicio=defineType({name:"servicio",title:"Servicio",type:"document",fields:[defineField({name:"titulo",title:"Título",type:"string",validation:r=>r.required()}),defineField({name:"descripcion",title:"Descripción",type:"text",validation:r=>r.required()}),defineField({name:"orden",title:"Orden",type:"number"})]});
+const paginaInicio=defineType({name:"paginaInicio",title:"Página de inicio",type:"document",fields:[defineField({name:"titulo",title:"Título principal",type:"string",validation:r=>r.required()}),defineField({name:"subtitulo",title:"Subtítulo",type:"text"}),defineField({name:"descripcionEmpresa",title:"Sobre LOSMATUS",type:"text"}),defineField({name:"servicios",title:"Servicios destacados",type:"array",of:[{type:"reference",to:[{type:"servicio"}]}]})]});
+export const schemaTypes=[paginaInicio,servicio];

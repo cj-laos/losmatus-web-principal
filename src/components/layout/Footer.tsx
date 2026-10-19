@@ -1,0 +1,1 @@
+export function Footer(){ return <footer className="bg-slate-950 px-5 py-8 text-center text-sm text-slate-300"><p>© {new Date().getFullYear()} LOSMATUS S.A.C. Todos los derechos reservados.</p></footer>; }
