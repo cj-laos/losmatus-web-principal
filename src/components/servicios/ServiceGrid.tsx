@@ -1,0 +1,4 @@
+import Link from "next/link";
+import type {Service} from "@/types/service";
+import {defaultServices} from "@/lib/services";
+export function ServiceGrid({services=defaultServices}:{services?:Service[]}){return <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{services.map(s=><article key={s.slug||s.title} className="rounded-xl border border-slate-200 bg-white p-7 shadow-sm"><h3 className="text-xl font-bold text-brand">{s.title}</h3><p className="mt-3 text-slate-600">{s.description}</p>{s.slug&&<Link href={`/servicios/${s.slug}`} className="mt-5 inline-block text-sm font-semibold text-brand underline">Conocer servicio</Link>}</article>)}</div>}

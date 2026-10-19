@@ -1,0 +1,1 @@
+export function ContactIntro(){return <div><p className="text-sm uppercase tracking-widest text-brand">Contacto</p><h1 className="mt-4 text-4xl font-bold">Hablemos de tu proyecto</h1><p className="mt-4 text-lg text-slate-600">Completa el formulario y nuestro equipo te responderá.</p></div>}

@@ -1,5 +1,3 @@
 import Link from "next/link";
-const navigation = [{label:"Inicio",href:"/"},{label:"Servicios",href:"/#servicios"},{label:"Nosotros",href:"/#nosotros"},{label:"Contacto",href:"/#contacto"}];
-export function Header() {
- return <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur"><nav aria-label="Navegación principal" className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4"><Link href="/" className="text-xl font-bold tracking-tight text-brand">LOSMATUS</Link><div className="flex flex-wrap gap-4 text-sm font-medium">{navigation.map(item=><Link className="hover:text-brand" href={item.href} key={item.label}>{item.label}</Link>)}</div></nav></header>;
-}
+const links=[{name:"Inicio",href:"/"},{name:"Nosotros",href:"/nosotros"},{name:"Servicios",href:"/servicios"},{name:"Contacto",href:"/contacto"}];
+export function Header(){return <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur"><nav className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4" aria-label="Navegación principal"><Link href="/" className="text-xl font-bold text-brand">LOSMATUS</Link><div className="flex flex-wrap gap-5 text-sm font-medium">{links.map(link=><Link href={link.href} key={link.href} className="hover:text-brand">{link.name}</Link>)}</div></nav></header>}

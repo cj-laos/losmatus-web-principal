@@ -1,0 +1,2 @@
+import Link from "next/link";
+export function AboutPreview({description}:{description?:string}){return <section className="bg-white px-5 py-20"><div className="mx-auto max-w-6xl"><h2 className="text-3xl font-bold">Conoce LOSMATUS</h2><p className="mt-5 max-w-3xl text-lg text-slate-600">{description||"Somos especialistas en soluciones tecnológicas, soporte, redes e infraestructura empresarial."}</p><Link href="/nosotros" className="mt-6 inline-block font-semibold text-brand underline">Sobre nosotros</Link></div></section>}

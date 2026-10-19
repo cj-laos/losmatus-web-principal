@@ -1,0 +1,3 @@
+import Link from "next/link";
+import type {Service} from "@/types/service";
+export function ServiceDetail({service}:{service:Service}){return <article className="mx-auto max-w-6xl px-5 py-20"><Link href="/servicios" className="text-brand underline">← Todos los servicios</Link><h1 className="mt-8 text-4xl font-bold">{service.title}</h1><p className="mt-6 max-w-3xl text-lg text-slate-600">{service.description}</p><Link href="/contacto" className="mt-8 inline-block rounded-lg bg-brand px-6 py-3 font-semibold text-white">Solicitar información</Link></article>}
