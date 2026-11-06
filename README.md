@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # LOSMATUS S.A.C. — Sitio web corporativo
 
 > Proyecto académico-colaborativo para estudiantes de la **Universidad Tecnológica del Perú (UTP)**. Sitio corporativo multipágina, **solo en español**, construido con Next.js, React, TypeScript, Tailwind CSS, Sanity y Resend.
@@ -336,3 +337,71 @@ Responsables/revisores: aprobar cambios, administrar credenciales, mantener Sani
 
 ---
 **LOSMATUS S.A.C. — Desarrollo web corporativo | Guía de colaboración UTP**
+=======
+# LOSMATUS S.A.C. — Web Corporativa Moderna
+
+Sitio web corporativo de alto rendimiento desarrollado con **Next.js 16 + React 19 + TypeScript + Tailwind CSS 4 + Sanity CMS + Resend**, adaptado a la identidad y servicios reales de [losmatus.com](https://www.losmatus.com/).
+
+## 🚀 Tecnologías y Arquitectura
+- **Framework:** Next.js 16 (App Router + Turbopack)
+- **UI & Estilos:** React 19, Tailwind CSS v4, Lucide React
+- **CMS Headless:** Sanity Studio v4 montado en `/studio` con fallbacks estáticos automáticos
+- **Formularios & Correo:** Resend con soporte HTML corporativo y protección anti-spam honeypot
+- **SEO & Rendimiento:** Generación estática SSG para servicios, sitemap dinámico y robots.txt
+
+## 🧭 Rutas del Sitio
+- `/` — Landing page corporativa de alto impacto (Hero interactivo, métricas de confianza, pilares de valor, servicios destacados, presentación institucional y CTA de cotización).
+- `/nosotros` — Presentación de **LOSMATUS S.A.C.**, misión y visión oficiales, pilares institucionales (Dedicación, Calidad y Esfuerzo).
+- `/servicios` — Catálogo filtrable por categorías (*Infraestructura*, *Seguridad Electrónica*, *Soporte TI*).
+- `/servicios/[slug]` — Páginas individuales con detalles técnicos, alcances y botón de cotización directa por WhatsApp.
+- `/contacto` — Formulario de cotización con selección de servicio corporativo e información de atención en Lima, Perú.
+- `/studio` — Panel de administración de contenidos Sanity Studio.
+
+## 🛠️ Instalación y Puesta en Marcha
+
+1. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
+
+2. **Variables de entorno:**
+   Copia el archivo de ejemplo o edita el `.env.local`:
+   ```bash
+   cp .env.example .env.local
+   ```
+
+3. **Ejecutar servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+   Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+
+## ⚙️ Configuración de Sanity CMS
+
+La web funciona en modo dual:
+- **Modo Local / Autónomo (por defecto):** Si aún no tienes un ID de proyecto de Sanity, la web carga el catálogo enriquecido con todos los servicios y datos reales de LOSMATUS de forma inmediata y sin errores.
+- **Modo Sanity CMS Activo:** Si deseas administrar contenidos desde el panel web:
+  1. Inicia sesión o regístrate gratis en [sanity.io](https://www.sanity.io/).
+  2. Crea un proyecto (o ejecuta `npx sanity init`).
+  3. Copia el **Project ID** de tu proyecto.
+  4. En `.env.local`, coloca:
+     ```env
+     NEXT_PUBLIC_SANITY_PROJECT_ID=tu_project_id_aqui
+     NEXT_PUBLIC_SANITY_DATASET=production
+     ```
+  5. Ingresa a [http://localhost:3000/studio](http://localhost:3000/studio) para gestionar el contenido en tiempo real.
+
+## 🧪 Comprobación de Calidad
+- **Verificación de tipos TypeScript:**
+  ```bash
+  npm run typecheck
+  ```
+- **Linter de código:**
+  ```bash
+  npm run lint
+  ```
+- **Compilación de producción:**
+  ```bash
+  npm run build
+  ```
+>>>>>>> Stashed changes
