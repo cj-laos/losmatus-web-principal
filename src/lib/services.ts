@@ -1,8 +1,73 @@
-import type {Service} from "@/types/service";
-export const defaultServices:Service[]=[
- {title:"Mesa de ayuda y soporte TI",description:"Atención técnica y continuidad operativa.",slug:"mesa-de-ayuda"},
- {title:"Redes y cableado estructurado",description:"Infraestructura de conectividad empresarial.",slug:"redes-y-cableado"},
- {title:"Videovigilancia y seguridad",description:"CCTV, control de acceso y seguridad electrónica.",slug:"seguridad-electronica"},
- {title:"Mantenimiento tecnológico",description:"Mantenimiento preventivo y correctivo.",slug:"mantenimiento"},
- {title:"Dominios y correo empresarial",description:"Servicios digitales para tu empresa.",slug:"dominios-y-correos"}
+import type { Service } from "@/types/service";
+
+export const defaultServices: Service[] = [
+  {
+    title: "Cableado Estructurado y Redes",
+    slug: "cableado-estructurado-redes",
+    category: "Infraestructura",
+    esDestacado: true,
+    beneficios: ["Certificación Fluke Networks", "Fibra óptica monomodo y multimodo", "Organización e identificación de gabinetes y racks"],
+    description: "Diseño, tendido, conectorización y certificación de puntos de red en Cat 6, 6A y Fibra Óptica, ordenamiento de racks y switches.",
+    highlights: ["Certificación Fluke Networks", "Fibra óptica monomodo y multimodo", "Organización e identificación de gabinetes y racks"],
+    iconName: "Network",
+    popular: true,
+  },
+  {
+    title: "Diseño e Implementación de Data Centers",
+    slug: "data-centers-infraestructura",
+    category: "Infraestructura",
+    description: "Centros de datos seguros y de alta disponibilidad con sistemas de climatización de precisión, respaldo UPS y monitoreo ambiental.",
+    highlights: ["Sistemas de energía ininterrumpida (UPS)", "Climatización y control de temperatura", "Pisos técnicos y bandejas portacables"],
+    iconName: "Server",
+  },
+  {
+    title: "Aulas y Oficinas Inteligentes",
+    slug: "aulas-oficinas-inteligentes",
+    category: "Infraestructura",
+    description: "Modernización de salas de juntas y espacios educativos con pantallas interactivas, sistemas de videoconferencia profesional y domótica.",
+    highlights: ["Videoconferencia Teams / Zoom Rooms", "Proyectores y pantallas interactivas", "Automatización de iluminación y audio corporativo"],
+    iconName: "Presentation",
+  },
+  {
+    title: "Videovigilancia y Cámaras CCTV",
+    slug: "videovigilancia-cctv",
+    category: "Seguridad",
+    description: "Instalación y configuración de cámaras de seguridad IP y HDCVI de alta resolución con analítica inteligente y acceso remoto desde smartphone.",
+    highlights: ["Cámaras IP con visión nocturna a color", "Grabadores NVR/XVR con respaldo en red", "Monitoreo remoto 24/7 en vivo"],
+    iconName: "Video",
+    popular: true,
+  },
+  {
+    title: "Control de Acceso y Asistencia Biométrico",
+    slug: "control-acceso-biometria",
+    category: "Seguridad",
+    description: "Sistemas biométricos de reconocimiento facial, huella dactilar, torniquetes y tarjetas RFID para restringir y auditar ingresos de personal.",
+    highlights: ["Reconocimiento facial sin contacto", "Integración con software de planilla y asistencia", "Torniquetes y cerraduras electromagnéticas"],
+    iconName: "ShieldCheck",
+  },
+  {
+    title: "Mesa de Ayuda y Helpdesk TI",
+    slug: "mesa-de-ayuda-soporte-ti",
+    category: "Soporte TI",
+    description: "Atención técnica inmediata remota y presencial (On-Site) para resolver incidencias de usuarios, impresoras, software y conectividad.",
+    highlights: ["SLA de respuesta garantizado", "Soporte remoto y técnicos en sitio", "Portal en la nube para tickets e incidencias"],
+    iconName: "Headphones",
+    popular: true,
+  },
+  {
+    title: "Mantenimiento Preventivo y Correctivo",
+    slug: "mantenimiento-tecnologico",
+    category: "Soporte TI",
+    description: "Planes programados de limpieza, optimización térmica, actualización de firmware y reparación de servidores, computadoras y periféricos.",
+    highlights: ["Prolonga la vida útil de tus equipos", "Prevención de paradas operativas inesperadas", "Informes técnicos detallados por equipo"],
+    iconName: "Wrench",
+  },
+  {
+    title: "Venta de Hardware y Licenciamiento",
+    slug: "hardware-licenciamiento",
+    category: "Soporte TI",
+    description: "Provisión de equipamiento de computación, servidores corporativos, switches gestionables y licenciamiento de software empresarial.",
+    highlights: ["Garantía de fabricante directa", "Marcas líderes: Cisco, Dell, HP, Lenovo", "Configuración y puesta en marcha incluida"],
+    iconName: "Cpu",
+  },
 ];

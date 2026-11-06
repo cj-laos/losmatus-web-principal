@@ -1,5 +1,215 @@
 @import "tailwindcss";
-:root { --background: #f8fafc; --foreground: #0e2435; --brand: #0d5675; }
-@theme inline { --color-background: var(--background); --color-foreground: var(--foreground); --color-brand: var(--brand); }
-html { scroll-behavior: smooth; }
-body { background: var(--background); color: var(--foreground); font-family: Arial, Helvetica, sans-serif; }
+
+:root {
+  --background: #fdfdfd;
+  --foreground: #121214;
+  --brand: #121214;
+  --brand-yellow: #FFE500;
+  --brand-yellow-hover: #F2D600;
+  --brand-accent-text: #ffffff;
+  --brand-dark: #09090b;
+  --brand-card: #18181b;
+  --brand-whatsapp: #25D366;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float-btn {
+  background-color: var(--brand-whatsapp) !important;
+  color: #ffffff !important;
+}
+
+.whatsapp-float-btn:hover {
+  filter: brightness(1.08);
+}
+
+/* Todos los botones con fondo de acento ahora tienen texto blanco nítido */
+a[class*="bg-[#FFE500]"],
+button[class*="bg-[#FFE500]"],
+body [class*="bg-[#FFE500]"] {
+  background-color: var(--brand-yellow) !important;
+  color: #ffffff !important;
+}
+
+a[class*="bg-[#FFE500]"] *,
+button[class*="bg-[#FFE500]"] *,
+body [class*="bg-[#FFE500]"] * {
+  color: #ffffff !important;
+}
+
+/* Clases de texto de acento (ej. enlaces activos, checks destacados) */
+body [class*="text-[#FFE500]"],
+body [class*="text-amber-400"] {
+  color: var(--brand-yellow) !important;
+}
+
+/* Tarjeta del Ecosistema Hero (Foto 2: letras blancas y súper legibles) */
+.hero-ecosystem-card {
+  background-color: rgba(24, 24, 27, 0.95) !important;
+  color: #ffffff !important;
+}
+
+.hero-ecosystem-card h2,
+.hero-ecosystem-card p,
+.hero-ecosystem-card span,
+.hero-ecosystem-card .ecosystem-title,
+.hero-ecosystem-card .ecosystem-subtitle {
+  color: #ffffff !important;
+}
+
+.hero-ecosystem-card .ecosystem-subtitle {
+  opacity: 0.85 !important;
+}
+
+.hero-ecosystem-card .ecosystem-item {
+  background-color: rgba(39, 39, 42, 0.9) !important;
+  border-color: rgba(82, 82, 91, 0.5) !important;
+}
+
+/* Status y Badge de la tarjeta con fondo semitransparente legible */
+.hero-ecosystem-card span[class*="rounded-full"] {
+  background-color: color-mix(in srgb, var(--brand-yellow) 25%, rgba(0,0,0,0.5)) !important;
+  color: #ffffff !important;
+  border-color: var(--brand-yellow) !important;
+}
+
+/* Íconos y contenedores con acento suave */
+div[class*="bg-[#FFE500]/10"],
+span[class*="bg-[#FFE500]/10"],
+div[class*="bg-brand-yellow/10"] {
+  background-color: color-mix(in srgb, var(--brand-yellow) 20%, transparent) !important;
+}
+
+div[class*="bg-[#FFE500]/10"] svg,
+span[class*="bg-[#FFE500]/10"] svg,
+div[class*="bg-[#FFE500]/10"] * {
+  color: var(--brand-yellow) !important;
+}
+
+/* Bordes con el color de acento o con opacidad */
+body [class*="border-[#FFE500]"],
+[class*="border-[#FFE500]/30"],
+[class*="border-[#FFE500]/40"],
+[class*="border-[#FFE500]/60"] {
+  border-color: var(--brand-yellow) !important;
+}
+
+/* Reemplazar resplandor / sombras amarillas fijas por el color de acento */
+[class*="shadow-[#FFE500]"],
+[class*="shadow-amber"] {
+  --tw-shadow-color: color-mix(in srgb, var(--brand-yellow) 35%, transparent) !important;
+}
+
+div[class*="radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(255,229,0"] {
+  background: radial-gradient(ellipse 80% 80% at 50% -20%, color-mix(in srgb, var(--brand-yellow) 25%, transparent), rgba(0,0,0,0)) !important;
+}
+
+/* Efectos hover de sombras y bordes (animación interactiva de tarjetas) */
+[class*="hover:shadow-[6px_6px_0px_0px_rgba(255,229,0,1)]"]:hover,
+[class*="hover:shadow-[4px_4px_0px_0px_rgba(255,229,0,1)]"]:hover,
+[class*="shadow-[3px_3px_0px_0px_rgba(255,229,0,1)]"] {
+  box-shadow: 6px 6px 0px 0px var(--brand-yellow) !important;
+}
+
+[class*="hover:border-[#FFE500]"]:hover {
+  border-color: var(--brand-yellow) !important;
+}
+
+[class*="hover:bg-[#F2D600]"]:hover {
+  background-color: var(--brand-yellow-hover) !important;
+}
+
+[class*="hover:text-[#FFE500]"]:hover {
+  color: var(--brand-yellow) !important;
+}
+
+/* Puntos animados pulsantes */
+span.animate-ping.bg-black,
+span.relative.bg-black {
+  background-color: var(--brand-accent-text) !important;
+}
+
+/* Modo filtro claro en portadas hero */
+body[data-hero-filter="claro"] .hero-cover-container {
+  background-color: #f8fafc !important;
+  color: #09090b !important;
+}
+
+body[data-hero-filter="claro"] .hero-cover-container .hero-overlay-gradient {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.55)) !important;
+}
+
+body[data-hero-filter="claro"] .hero-cover-container .hero-overlay-radial {
+  background: linear-gradient(to top, rgba(248, 250, 252, 0.95), transparent, rgba(255, 255, 255, 0.6)) !important;
+}
+
+body[data-hero-filter="claro"] .hero-cover-container h1,
+body[data-hero-filter="claro"] .hero-cover-container .hero-title {
+  color: #09090b !important;
+}
+
+/* Solo cambiar subtítulo principal de la portada, NO tocar la tarjeta lateral de servicios */
+body[data-hero-filter="claro"] .hero-cover-container > div > div > div > p.hero-subtitle {
+  color: #3f3f46 !important;
+}
+
+body[data-hero-filter="claro"] .hero-cover-container .hero-text-zinc {
+  color: #27272a !important;
+}
+
+body[data-hero-filter="claro"] .hero-cover-container .hero-badge {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  color: #09090b !important;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand: var(--brand);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-yellow-hover: var(--brand-yellow-hover);
+  --color-brand-dark: var(--brand-dark);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Glassmorphism helpers with dark / yellow accent */
+.glass-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-dark {
+  background: rgba(18, 18, 20, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Animación de marquesina infinita para clientes/marcas */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
